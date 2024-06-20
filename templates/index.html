@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Page Data Fetcher</title>
+    <link rel="stylesheet" href="static\style.css">
+</head>
+<body>
+    <h1>Facebook Page Data Fetcher</h1>
+    <form method="POST">
+        <label for="page_id">Facebook Page ID:</label>
+        <input type="text" id="page_id" name="page_id" required>
+        <br>
+        <label for="access_token">Access Token:</label>
+        <input type="text" id="access_token" name="access_token" required>
+        <br>
+        <button type="submit">Fetch and Save Data</button>
+    </form>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul>
+        {% for category, message in messages %}
+          <li class="{{ category }}">{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    <footer>
+        <a href="{{ tos_url }}">Terms of Service</a> |
+        <a href="{{ privacy_policy_url }}">Privacy Policy</a>
+    </footer>
+</body>
+</html>
+
