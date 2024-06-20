@@ -28,14 +28,14 @@ def save_to_csv(data, filename='facebook_page_data.csv'):
         # Writing the data
         csvwriter.writerows(rows)
 
-if __name__ == "__main__":
-    page_id = "your_facebook_page_id"
-    access_token = "your_facebook_access_token"
-    data = fetch_facebook_page_data(page_id, access_token)
-    if data:
-        save_to_csv(data)
-        print("Data saved to facebook_page_data.csv")
-    else:
-        print("Failed to fetch data")
+#if __name__ == "__main__":
+    #page_id = "your_facebook_page_id"
+    #access_token = "your_facebook_access_token"
+    #data = fetch_facebook_page_data(page_id, access_token)
+    #if data:
+        #save_to_csv(data)
+        #print("Data saved to facebook_page_data.csv")
+    #else:
+        #print("Failed to fetch data")
 
 
