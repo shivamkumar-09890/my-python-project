@@ -2,9 +2,12 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 import requests
 import csv
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
-app.secret_key = 'supersecretkey'  # For flash messages
+app.secret_key = os.getenv('SECRET_KEY')  # For flash messages
 
 # URLs to your hosted ToS and Privacy Policy
 TOS_URL = "https://shivamkumar-09890.github.io/app-doc/tos.html"
